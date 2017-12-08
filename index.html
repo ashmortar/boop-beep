@@ -7,33 +7,45 @@
     <script src="js/scripts.js"></script>
     <title>Boop Beep</title>
   </head>
-  <body>'
+  <body>
+    <div class="jumbotron">
+      <h1><em>Boop! Beep!</em></h2>
+        <p>complete this form to generate something strange!</p>
+    </div>
     <div class="container">
-      <form id="number">
-        <div class="form-group">
-          <label for="name">Please enter your name</label>
-          <input id="name" class="form-control" type="text"></input>
+      <div class ="row">
+        <div class="col-sm-2">
         </div>
-        <div class="form-group">
-          <label for="inputNumber">Please enter a number</label>
-          <input id="inputNumber" class="form-control" type="number"></input>
-          <button class="submit btn btn-default">GO!</button>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="reverse" id="forward" value="false" checked>
-            forward
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="reverse" id="backward" value="true">
-            backward
-          </label>
-        </div>
+        <div class="col-sm-8">
+          <form id="number">
+            <div class="form-group">
+              <label for="name">Please enter your name</label>
+              <input id="name" class="form-control" type="text"></input>
+            </div>
+            <div class="form-group">
+              <label for="inputNumber">Please enter a number</label>
+              <input id="inputNumber" class="form-control" type="number"></input>
+              <button class="submit btn btn-default">GO!</button>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="reverse" id="forward" value="false" checked>
+                forward
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="reverse" id="backward" value="true">
+                backward
+              </label>
+            </div>
 
-        <div class="result">
-        </div
+            <div class="result">
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
     </div>
   </body>
 </html>

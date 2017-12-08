@@ -1,0 +1,16 @@
+.jumbotron {
+  text-align: center;
+  background-image: url("../img/robot.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #d65b22;
+}
+
+body {
+  background-color: #fffbf9;
+  color: #d65b22;
+}
+
+.result {
+  display: none;
+}
