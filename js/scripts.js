@@ -4,6 +4,7 @@ var boopBeep = function (inputNumber) {
 
   //a blank array in which we will store values and operateupon them
   var numberArray = [];
+  var oneCheck = new RegExp("1")
 
   //this takes the inputNumber and create an array of all integers from 0 through that number
   for (var i = 0; i <= inputNumber; i++) {
@@ -13,7 +14,7 @@ var boopBeep = function (inputNumber) {
   //this identifies 1 and replaces it with the string "boop!"
 
   for (var j = 0; j < numberArray.length; j ++) {
-    if (numberArray[j] === 1) {
+    if (oneCheck.test(numberArray[j])) {
       numberArray[j] = "boop!";
     } else if (numberArray[j] === 0) {
         numberArray[j] = "beep!";
