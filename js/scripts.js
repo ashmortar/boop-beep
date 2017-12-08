@@ -15,8 +15,10 @@ var boopBeep = function (inputNumber) {
   //this identifies 1 and replaces it with the string "boop!"
 
   for (var j = 0; j < numberArray.length; j ++) {
-    if (zeroCheck.test(numberArray[j])) {
-      numberArray[j] = "beep!";
+    if(((numberArray[j] % 3) === 0) && (numberArray[j] != 0)) {
+      numberArray[j] = "I'm sorry, Dave. I'm afraid I can't do that.";
+    } else if (zeroCheck.test(numberArray[j])) {
+        numberArray[j] = "beep!";
     } else if (oneCheck.test(numberArray[j])) {
         numberArray[j] = "boop!";
       } else {
