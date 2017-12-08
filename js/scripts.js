@@ -52,15 +52,11 @@ $(document).ready(function() {
     var output = boopBeep(inputNumber);
     var name = $("input#name").val();
     //check if a name has been entered and if so run nameAdjustor function
-    if ($("input#name").val()  === "") {
-      console.log("no name")
-    } else {
+    if ($("input#name").val()  != "") {
         output = nameAdjustor(output, name);
       }
     //check if the revere radio has been selected if so reverse output
-    if ($("input:radio[name=reverse]:checked").val() === "false") {
-      console.log("forward");
-    } else {
+    if ($("input:radio[name=reverse]:checked").val() === "true") {
         output.reverse();
       }
     if (inputNumber >= 100) {
