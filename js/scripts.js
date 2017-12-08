@@ -1,10 +1,24 @@
 //back end logic
 
 var boopBeep = function (inputNumber) {
+
+  //a blank array in which we will store values and operateupon them
   var numberArray = [];
+
+  //this takes the inputNumber and create an array of all integers from 0 through that number
   for (var i = 0; i <= inputNumber; i++) {
     numberArray.push(i);
   }
+
+  //this identifies 1 and replaces it with the string "boop!"
+
+  for (var j = 0; j < numberArray.length; j ++) {
+    if (numberArray[j] === 1) {
+      numberArray[j] = "boop!";
+    }
+  }
+
+
   return numberArray;
 }
 
