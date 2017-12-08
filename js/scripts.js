@@ -1,7 +1,11 @@
 //back end logic
 
 var boopBeep = function (inputNumber) {
-  return inputNumber;
+  var numberArray = [];
+  for (var i = 0; i <= inputNumber; i++) {
+    numberArray.push(i);
+  }
+  return numberArray;
 }
 
 
@@ -15,7 +19,7 @@ var boopBeep = function (inputNumber) {
 $(document).ready(function() {
   $("form#number").submit(function(event) {
     event.preventDefault();
-    var inputNumber = $("input#inputNumber").val();
+    var inputNumber = parseInt($("input#inputNumber").val());
     var output = boopBeep(inputNumber);
     $(".result").text(output);
   });
