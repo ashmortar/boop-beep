@@ -15,8 +15,12 @@ var boopBeep = function (inputNumber) {
   for (var j = 0; j < numberArray.length; j ++) {
     if (numberArray[j] === 1) {
       numberArray[j] = "boop!";
+    } else if (numberArray[j] === 0) {
+        numberArray[j] = "beep!";
+      } else {
+        console.log("greater than 1");
+      }
     }
-  }
 
 
   return numberArray;
