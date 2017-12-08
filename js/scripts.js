@@ -51,16 +51,28 @@ $(document).ready(function() {
     var inputNumber = parseInt($("input#inputNumber").val());
     var output = boopBeep(inputNumber);
     var name = $("input#name").val();
+    //check if a name has been entered and if so run nameAdjustor function
     if ($("input#name").val()  === "") {
       console.log("no name")
     } else {
         output = nameAdjustor(output, name);
       }
-    if ($("input:radio[name=reverse]:checked").val() === "false")
-      $(".result").text(output);
-      else {
+    //check if the revere radio has been selected if so reverse output
+    if ($("input:radio[name=reverse]:checked").val() === "false") {
+      console.log("forward");
+    } else {
         output.reverse();
-        $(".result").text(output);
       }
+    if (inputNumber >= 100) {
+      $(".result").text(output);
+      $("#number").hide();
+      $("#long").fadeIn("slow").delay(2000).fadeOut("fast");
+      $(".result").delay(3000).fadeIn("slow");
+    } else {
+      $(".result").text(output);
+      $("#number").hide();
+      $("#short").fadeIn("slow").delay(2000).fadeOut("fast");
+      $(".result").delay(3000).fadeIn("slow");
+    }
   });
 });

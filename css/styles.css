@@ -2,7 +2,7 @@
   text-align: center;
   background-image: url("../img/robot.JPG");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 290%;
   color: #d65b22;
 }
 
@@ -21,4 +21,9 @@ body {
 
 .result {
   display: none;
+}
+
+.thinking {
+  display: none;
+  text-align: center;
 }
