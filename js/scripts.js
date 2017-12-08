@@ -12,8 +12,7 @@ var boopBeep = function (inputNumber) {
     numberArray.push(i);
   }
 
-  //this identifies 1 and replaces it with the string "boop!"
-
+  //this adjusts the array based on the criteria set out in the assignment
   for (var j = 0; j < numberArray.length; j ++) {
     if(((numberArray[j] % 3) === 0) && (numberArray[j] != 0)) {
       numberArray[j] = "I'm sorry, Dave. I'm afraid I can't do that.";
@@ -30,7 +29,15 @@ var boopBeep = function (inputNumber) {
   return numberArray;
 }
 
-
+var nameAdjustor = function(output, name) {
+  var nameCheck = new RegExp("Dave");
+  for (var i = 0; i < output.length; i ++) {
+    if (nameCheck.test(output[i])) {
+      output[i] = "I'm Sorry, " + name + ". I'm afraid I can't do that.";
+    }
+  }
+  return output;
+}
 
 
 
@@ -43,6 +50,17 @@ $(document).ready(function() {
     event.preventDefault();
     var inputNumber = parseInt($("input#inputNumber").val());
     var output = boopBeep(inputNumber);
-    $(".result").text(output);
+    var name = $("input#name").val();
+    if ($("input#name").val()  === "") {
+      console.log("no name")
+    } else {
+        output = nameAdjustor(output, name);
+      }
+    if ($("input:radio[name=reverse]:checked").val() === "false")
+      $(".result").text(output);
+      else {
+        output.reverse();
+        $(".result").text(output);
+      }
   });
 });
