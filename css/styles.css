@@ -11,7 +11,7 @@ h1 {
 }
 
 p {
-  
+
 }
 
 body {
@@ -19,7 +19,11 @@ body {
   color: #d65b22;
 }
 
-.result {
+.back {
+  display: none;
+  text-align: center;
+}
+.output {
   display: none;
 }
 

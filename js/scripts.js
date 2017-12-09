@@ -63,12 +63,18 @@ $(document).ready(function() {
       $(".result").text(output);
       $("#number").hide();
       $("#long").fadeIn("slow").delay(2000).fadeOut("fast");
-      $(".result").delay(3000).fadeIn("slow");
+      $(".output").delay(3000).fadeIn("slow");
     } else {
       $(".result").text(output);
       $("#number").hide();
       $("#short").fadeIn("slow").delay(2000).fadeOut("fast");
-      $(".result").delay(3000).fadeIn("slow");
+      $(".output").delay(3000).fadeIn("slow");
     }
   });
+  $("button.restart").click(function(event) {
+    event.preventDefault();
+    $(".output").hide();
+    $(".back").fadeIn("slow").delay(2000).fadeOut("fast");
+    $("#number").delay(3000).fadeIn("slow");
+  })
 });
